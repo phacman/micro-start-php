@@ -1,0 +1,12 @@
+services:
+  php:
+    image: php:8.2.3-apache-buster
+    env_file: .env
+    restart: on-failure
+    working_dir: /var/www/html
+    volumes:
+      - ./html:/var/www/html
+      - ./config/ports.conf:/etc/apache2/ports.conf
+      - ./config/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    ports:
+      - ${PORT_EXTERNAL}:${PORT_INTERNAL}
