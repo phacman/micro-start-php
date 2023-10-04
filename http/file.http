@@ -1,0 +1,5 @@
+GET http://localhost:7200/assets/favicon.png
+
+### /assets/favicon.png
+### /assets/style.css
+### /download/some.txt

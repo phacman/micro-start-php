@@ -9,6 +9,4 @@ COPY ./config/default.conf /etc/nginx/http.d/default.conf
 
 EXPOSE 80
 
-STOPSIGNAL SIGTERM
-
-CMD ["/bin/bash", "-c", "php-fpm82 && nginx -g 'daemon off;'"]
+CMD php-fpm82 -D; nginx -g 'daemon off;'

@@ -1,0 +1,8 @@
+GET http://localhost:7200/api
+Accept: application/json
+
+### /api
+### /apibad
+### /api/bad
+### /api/bad/good
+### /api/bad/good?hello=dude
