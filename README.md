@@ -2,7 +2,9 @@
 
 Simple microservice with native PHP.
 
-Based on `php:8.2.3-apache-buster`. Built image: `405 MB`;
+> Feature: Alpine + NGINX + PHP-FPM
+
+Based on `alpine:3.18.4`. Built image: `23.8 MB`;
 ```shell
 # run this command to start
 make d-up

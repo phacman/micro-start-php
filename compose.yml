@@ -1,12 +1,11 @@
 services:
   php:
-    image: php:8.2.3-apache-buster
-    env_file: .env
+    build:
+      context: .
+    image: micro-start-php
     restart: on-failure
-    working_dir: /var/www/html
+    working_dir: /usr/share/nginx/html
     volumes:
-      - ./html:/var/www/html
-      - ./config/ports.conf:/etc/apache2/ports.conf
-      - ./config/default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./html:/usr/share/nginx/html
     ports:
-      - ${PORT_EXTERNAL}:${PORT_INTERNAL}
+      - ${PORT_EXTERNAL}:80
